@@ -1,48 +1,64 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="stytle.css" />
-    <link rel="icon" href="heart.jpeg" type="image/png" />
+<head>
+  <meta charset="UTF-8" />
 
-    <title>Valentine Letter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ✅ Correct CSS file -->
+  <link rel="stylesheet" href="style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- Envelope Screen -->
-    <div id="envelope-container">
-      <img src="envelope.png" alt="Envelope" id="envelope" />
-      <p>♡ Letter for You ♡</p>
-    </div>
+  <!-- Favicon -->
+  <link rel="icon" href="heart.jpeg" type="image/png" />
 
-    <!-- Letter Screen -->
-    <div id="letter-container">
-      <div class="letter-window">
-        <h1 id="letter-title">Will you be my Valentine?</h1>
+  <title>Valentine Letter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <img src="cat_heart.gif" class="cat" id="letter-cat" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+    rel="stylesheet"
+  />
+</head>
 
-        <div class="buttons" id="letter-buttons">
-          <img src="yes.png" class="btn yes-btn" alt="Yes" />
+<body>
 
-          <div class="no-wrapper">
-            <img src="no.png" class="btn no-btn" alt="No" />
-          </div>
+  <!-- Envelope Screen -->
+  <div id="envelope-container">
+    <img src="envelope.png" alt="Envelope" id="envelope" />
+    <p>♡ Letter for You ♡</p>
+  </div>
+
+  <!-- Letter Screen -->
+  <div id="letter-container">
+    <div class="letter-window">
+      <h1 id="letter-title">Will you be my Valentine?</h1>
+
+      <img src="cat_heart.gif" class="cat" id="letter-cat" />
+
+      <div class="buttons" id="letter-buttons">
+        <img src="yes.png" class="btn yes-btn" alt="Yes" />
+        <div class="no-wrapper">
+          <img src="no.png" class="btn no-btn" alt="No" />
         </div>
-
-        <p id="final-text" class="final-text" style="display: none">
-          <strong>Valentine Date:</strong> Meow Restaurant at 7pm. Dress fancy!
-        </p>
       </div>
+
+      <p id="final-text" class="final-text" style="display: none">
+        <strong>Love Plan:</strong> Holding hands, stolen smiles, and us 💖  
+        <br />
+        <strong>Promise:</strong> In a world full of choices, I’d still choose you ✨
+      </p>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+
+  <!-- ✅ Sounds MUST be before script -->
+  <audio id="sound-envelope" src="sounds/pop.mp3"></audio>
+  <audio id="sound-open" src="sounds/open.mp3"></audio>
+  <audio id="sound-no" src="sounds/no.mp3"></audio>
+  <audio id="sound-yes" src="sounds/yes.mp3"></audio>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
 </html>

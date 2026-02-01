@@ -9,16 +9,29 @@ const catImg = document.getElementById("letter-cat");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 
+// Sounds
+const envelopeSound = document.getElementById("sound-envelope");
+const openSound = document.getElementById("sound-open");
+const noSound = document.getElementById("sound-no");
+const yesSound = document.getElementById("sound-yes");
+
+
 // Click Envelope
 
 envelope.addEventListener("click", () => {
+    envelopeSound.currentTime = 0;
+    envelopeSound.play();
+
     envelope.style.display = "none";
     letter.style.display = "flex";
 
-    setTimeout( () => {
+    setTimeout(() => {
+        openSound.currentTime = 0;
+        openSound.play();
         document.querySelector(".letter-window").classList.add("open");
-    },50);
+    }, 200);
 });
+
 
 // Logic to move the NO btn
 
@@ -34,6 +47,9 @@ noBtn.addEventListener("mouseover", () => {
 
     noBtn.style.transition = "transform 0.3s ease";
     noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    noSound.currentTime = 0;
+noSound.play();
+
 });
 
 // Logic to make YES btn to grow
@@ -60,6 +76,8 @@ noBtn.addEventListener("mouseover", () => {
 // YES is clicked
 
 yesBtn.addEventListener("click", () => {
+     yesSound.currentTime = 0;
+    yesSound.play();
     title.textContent = "Yippeeee!";
 
     catImg.src = "cat_dance.gif";
